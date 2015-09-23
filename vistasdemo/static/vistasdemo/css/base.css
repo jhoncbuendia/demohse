@@ -1,0 +1,222 @@
+
+
+@font-face {
+
+font-family: aller2;
+
+src: url ("/static/recursos_comunes/aller.ttf") ;
+
+}
+
+
+body {
+	font-family: aller2;
+}
+
+
+
+ul {
+	list-style: none;
+}
+.header{
+	
+	border: 0px S;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	
+
+}
+
+.menu-perfiles{
+
+	background-color: white;
+	border: solid 1px #d4d0c7;
+	border-left: none;
+	border-bottom: none;
+
+}
+
+.item{
+	height: 50px;
+	margin-top: 15px;
+	background-color: #f8f8f8;
+	font-size: 20px;
+	border: solid 1px #d4d0c7;
+}
+
+.titulo-perfiles{
+	margin-top: 15px;
+	font-size: 25px;
+	margin-bottom: 15px;
+	color: black;
+}
+
+.herramientas{
+	padding-top: 15px;
+	background-color: white;
+	border-right:  solid 1px #d4d0c7;
+
+
+}
+
+.herramientas ul{
+	border-bottom: solid 1px #d4d0c7;
+}
+.herramientas ul li{
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 5px;
+		margin-bottom: 5px;
+		font-weight: bold;
+	}
+
+
+
+.herramientas ul li:hover {
+		background-color: #f2f2f2;
+	}
+
+.titulo-herramientas{
+	color:red;
+}
+
+.buscar-usuario{
+		background-color: white !important;
+	}
+
+
+.header-ordenes{
+	margin-top: 20px;
+	font-weight: bold;
+}
+
+.header-ordenes p{
+	color: black;
+	font-weight: bold;
+	font-size: 17px;
+}
+
+.header-actividades{
+	margin-top: 15px;
+	font-weight: bold;
+	padding-top: 15px;
+
+}
+
+
+
+.panel{
+	border-left: none;
+	border-right: none;
+	margin-bottom: 15px !important;
+	background-color: white;
+}
+
+.breadcrumbs{
+background-color: white;
+border-radius: 0px;
+border:0px;
+}
+
+.selectable{
+	background-color: #f8f8f8;
+	border: solid 1px #d4d0c7;
+}
+
+.selectable:hover{
+	background-color: #f2f2f2;
+	cursor: pointer;
+}
+
+.en-espera{
+	background-color: #FFA92E;
+}
+
+.valido{
+	background-color: #48E515;
+}
+
+.vencido{
+	background-color: red;
+}
+
+a{
+	color:black;
+}
+
+.breadcrumbs li a {
+	color:black;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.detalle{
+	color:blue;
+}
+
+.detalle:hover{
+	color:red;
+}
+
+.pivote{
+
+display: none;
+
+}
+
+.pivote ul li{
+		margin-bottom: 10px;
+		padding: 5px;
+		cursor: pointer;
+	}
+
+.chat{
+	padding-top: 5px;
+	display: none;
+	position: absolute;
+	margin-bottom: 0;
+	height: 300px;
+	width: 350px;
+	background-color: #f2f2f2;
+	z-index: 7;
+	border: solid 1px #d4d0c7;
+	padding-right: 15px;
+	margin-top: -150px;
+	margin-left: 50px;
+
+
+}
+.chat ul:hover{
+	background-color: #f2f2f2;
+}
+
+.chat ul{
+border-bottom: none;
+}
+
+.chat ul li textarea{
+	height: 150px;
+	margin-bottom: -5px !important;
+}
+
+
+.titulo{
+	margin-bottom: -10px !important;
+
+}
+
+.chat-end{
+	margin-bottom: -10px;
+}
+
+position: absolute;
+width: 300px;
+border: 1px solid #555;
+background-color: #f3f3f3;
+box-shadow: 0 0 4px #888;
+margin-top: 44px;
+border-radius: 3px;
+margin-left: 305px;
+z-index: 4;
+padding: 15px;
+text-align: justify;

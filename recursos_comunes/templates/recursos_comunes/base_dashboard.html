@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ STATIC_URL }}plataforma_hse/css/jquery-ui.css"/>
+    <link rel="stylesheet" href="{{ STATIC_URL }}recursos_comunes/css/foundation.css"/>
+    <link rel="stylesheet" href="{{ STATIC_URL }}recursos_comunes/css/base_index.css"/>
+    {% block css %}{% endblock %}
+    <script src="{{ STATIC_URL }}recursos_comunes/js/vendor/jquery.js"></script>
+    <script src="{{ STATIC_URL }}recursos_comunes/js/vendor/modernizr.js"></script>
+    <script src="{{ STATIC_URL }}recursos_comunes/js/foundation.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}plataforma_hse/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}plataforma_hse/js/jquery.validate.js"></script>
+
+    <script src="{{ STATIC_URL }}recursos_comunes/js/base.js"></script>
+    {% block script %}
+
+    {% endblock %}
+    <script type="text/javascript">
+        $(document).ready(function () {
+            console.log("ready!");
+            $(document).foundation();
+            $(".ayuda").click(function () {
+                $('#myModal').foundation('reveal', 'open');
+
+            });
+
+            $('.opcion-principal').click(function () {
+
+                $(this).find('ul').toggle();
+            });
+
+
+            $('#toogle-colum-izq').click(function () {
+
+
+                $('#columnaizquierda').toggle();
+            });
+        });
+
+
+        function init() {
+            $(document).foundation();
+            $(".ayuda").click(function () {
+                $('#myModal').foundation('reveal', 'open');
+
+            });
+
+            $('.opcion-principal').click(function () {
+
+                console.log("true");
+                $('.opcion-principal ul').toggle();
+            });
+
+
+            $('#toogle-colum-izq').click(function () {
+
+
+                $('#columnaizquierda').toggle();
+            });
+        }
+    </script>
+</head>
+<body>
+<div id="myModal" class="reveal-modal" data-reveal>
+    <h2>LISTA DE NOTIFICACIONES</h2>
+
+    <p class="lead">LISTA DE NOTIFICACIONES</p>
+
+    <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto
+        de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a
+        la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos
+        especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos
+        electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas
+        "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como
+        por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
+    <a class="close-reveal-modal">&#215;</a>
+</div>
+
+
+<nav id="barra_superior">
+    <div class="row">
+        <div id="toogle-colum-izq" class="small-12 large-1 columns menu text-center">
+            <img src="{{ STATIC_URL }}recursos_comunes/img/opciones.png">
+            HSE
+        </div>
+
+
+        <div class="small-12 large-2 columns menu text-center ">
+            <nav class="nav-popup" id="colorNav">
+                <nav class="nav-popup" id="colorNav">
+                    <ul>
+                        <li class="green">
+                            <a href="#" class="iceon-home"> <img src="{{ STATIC_URL }}recursos_comunes/img/small.jpg">
+                                {{ user.username }} </a>
+                            <ul style="z-index: 10;">
+                                <li><a href="#" data-reveal-id="myModal" data-reveal>{{ user.username }}</a></li>
+                                <li><a href="#" data-reveal-id="myModal" data-reveal>Mensajes (5)</a></li>
+                                <li><a href="#" data-reveal-id="myModal" data-reveal>Notificaciones (10)</a></li>
+                                <li id="salir">
+                                    {% if user.is_authenticated %}
+                                        <a href="{% url "logout" %}"> Cerrar Sesión</a>
+                                    {% else %}
+                                        <a href="{% url "login" %}"> Login </a>
+                                    {% endif %}
+                                </li>
+                                <!-- More dropdown options -->
+                            </ul>
+                        </li>
+
+                        <!-- More menu items -->
+
+                    </ul>
+                </nav>
+            </nav>
+        </div>
+
+
+    </div>
+
+</nav>
+<section id="contenido">
+
+    <div class="row">
+
+
+        <div id="columnaizquierda" class="small-12 large-2 columns">
+            <div id="cont-opciones">
+                <ul>
+                    <li class='opcion-principal'>
+                        Opcion
+                        <ul>
+                            <li>
+                                Opcion
+                            </li>
+                            <li>
+                                Opcion
+                            </li>
+                            <li>
+                                Opcion
+                            </li>
+                            <li>
+                                Opcion
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        Opcion
+                    </li>
+                    <li>
+                        Opcion
+                    </li>
+                    <li class='opcion-principal'>
+                        Opcion
+                        <ul>
+                            <li>
+                                Opcion
+                            </li>
+                            <li>
+                                Opcion
+                            </li>
+                            <li>
+                                Opcion
+                            </li>
+                            <li>
+                                Opcion
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="small-12 large-10 columns">
+           
+                <div class="row">
+                            <div class="small-12 large-12 columns">
+                                <nav class="top-bar" data-topbar>
+                                  <ul class="title-area">
+                                    <li class="name">
+                                      
+
+                                    </li>
+
+                                     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+                                    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+                                  </ul>
+
+                                  <section class="top-bar-section">
+                                    <!-- Right Nav Section -->
+                                    <ul class="right">
+                                      
+                                      
+                                    </ul>
+
+                                    <!-- Left Nav Section -->
+                                    <ul class="left">
+                                      <li><a href="#">Opcion</a></li>
+                                      <li><a href="#">Opcion</a></li>
+                                      <li><a href="#">Opcion</a></li>
+                                      <li><a href="#">Opcion</a></li>
+                                    </ul>
+                                  </section>
+                                </nav>
+                            </div>
+                       
+                        
+
+                           
+                            <div class="small-12 large-12 columns">
+                                <h2>{{ permisos }}</h2>
+                                {% block content %}
+                                {% endblock %}
+
+                            </div>  
+                </div>
+
+        </div>
+    </div>
+    <!--div class="row" >
+        <div class="small-5 large-2 columns app text-center">
+            APLICACION
+        </div>
+        <div class="small-5 small-offset-2 large-2  large-offset-1 left  columns app text-center">
+            APLICACION
+        </div>
+        <div class="small-5 large-2  large-offset-1 left  columns app text-center">
+            APLICACION
+        </div>
+        <div class="small-5 small-offset-2 large-2  large-offset-1 left  columns app text-center">
+            APLICACION
+        </div>
+        <div class="small-5 large-2   left  columns app text-center">
+            APLICACION
+        </div>
+        <div class="small-5 large-2 small-offset-2 large-offset-1 left  columns app text-center">
+            APLICACION
+        </div>
+        <div class="small-5 large-2  large-offset-1 left  columns app text-center">
+            APLICACION
+        </div>
+        <div class="small-5 large-2 small-offset-2 large-offset-1 left  columns app text-center">
+            APLICACION
+        </div>
+    </div-->
+
+</section>
+
+</body>
+</html>

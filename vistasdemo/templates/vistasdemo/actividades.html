@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="{{ STATIC_URL }}recursos_comunes/css/foundation.css"/>
+	<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}vistasdemo/css/base.css">
+	<script src="{{ STATIC_URL }}recursos_comunes/js/vendor/jquery.js"></script>
+    <script src="{{ STATIC_URL }}recursos_comunes/js/vendor/modernizr.js"></script>
+    <script src="{{ STATIC_URL }}recursos_comunes/js/foundation.min.js"></script>
+    <script src="{{ STATIC_URL }}recursos_comunes/js/vendor/jquery.js"></script>
+    <script type="text/javascript">
+
+        function init() {
+            $(document).foundation();
+                    }
+    </script>
+</head>
+<body onload="init()">
+
+	<div class="row header">
+		<div class="small-12 large-2 columns">
+			<img src="{{ STATIC_URL }}recursos_comunes/img/logo.png">
+		</div>
+		
+		<div class="small-12 large-2 columns columns large-offset-5">
+			
+		</div>
+		<div class="small-12 large-3 columns ">
+			Bienvenido Sr Roberto <img src="{{ STATIC_URL }}recursos_comunes/img/small.jpg">
+		</div>
+	</div>
+
+	<div class="row">
+			<div class="small-12 large-12 columns">
+				<ul class="breadcrumbs">
+				  <li><a href="/perfiles/">Inicio</a></li>
+				  <li><a href="/contratista/">Contratista</a></li>
+				
+				  
+				</ul>
+			</div>
+	</div>
+
+	<div class="row menu-perfiles">
+		
+
+		<div class="small-12 large12 columns">
+			<div class="row header-actividades">
+				<div class="small-12 large-3 columns header-ordenes">
+				<p>Estas son tus actividades</p>
+				</div>
+				<div class="small-12 large-3 columns left">
+				<input type="text" placeholder="Buscar Actividad">
+				</div>
+
+
+			</div>
+			
+			
+			<div class="row panel" >
+				<div class="small-12 large-12 columns text-center">	
+						<p>Actividad 1</p>
+				</div>
+				<div class="small-12 large-12 columns">
+
+					<div class="small-12 large-3 columns text-center">	
+								<p>Tipo</p>
+					</div>
+								
+					<div class="small-12 large-3 columns text-center">	
+								<p>06-11-2014</p>
+					</div>
+					<div class="small-12 large-3 columns text-center">	
+								<p>20-11-2014</p>
+					</div>
+					<div class="small-12 large-3 columns text-center">	
+								<p>Refineria 01</p>
+					</div>
+					<div class="small-12 large-3 columns ">
+								<p class="selectable text-center"><a href="/documentosrequeridos/">Documentos requeridos</a></p>	
+								
+					</div>
+					
+					<div class="small-12 large-3 columns">	
+								<p class="selectable text-center">Minuta</p>
+					</div>
+					<div class="small-12 large-3 columns">	
+								<p class="selectable text-center"><a href="/permisostrabajo/">Permisos de trabajo</a></p>
+					</div>				
+				</div>
+			</div>
+		</div>
+
+
+
+
+			
+			<div class="small-12 large-12 columns">
+				<ul class="pagination">
+				  <li class="arrow unavailable"><a href="">&laquo;</a></li>
+				  <li class="current"><a href="">1</a></li>
+				  <li><a href="">2</a></li>
+				  <li><a href="">3</a></li>
+				  <li><a href="">4</a></li>
+				  <li class="unavailable"><a href="">&hellip;</a></li>
+				  <li><a href="">12</a></li>
+				  <li><a href="">13</a></li>
+				  <li class="arrow"><a href="">&raquo;</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+

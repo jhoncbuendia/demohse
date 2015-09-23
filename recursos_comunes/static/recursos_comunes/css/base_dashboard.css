@@ -1,0 +1,60 @@
+#barra_superior {
+    margin-top: 1%;
+}
+
+#contenido {
+    /*background-color: green;*/
+    margin-top: 2%;
+}
+
+#opciones {
+    background-color: #55B968;
+    height: 20%;
+}
+
+#content_view {
+    background-color: #55B968;
+    margin-top: 2%;
+    height: 50%;
+}
+
+.menu {
+
+    margin-top: 10px;
+    background-color: #652C90;
+    padding: 15px;
+    font-weight: bold;
+    color: white;
+
+}
+
+.salir {
+
+    margin-top: 10px;
+    background-color: red;
+    padding: 15px;
+    font-weight: bold;
+    color: white;
+
+}
+
+.app {
+    background-color: #55B968;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+    height: 180px;
+    margin-top: 30px;
+}
+
+.notificacion {
+    margin-top: 10px;
+    background-color: #F5B753;
+    padding: 15px;
+    font-weight: bold;
+    color: white;
+
+}
+
+
+

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="{{ STATIC_URL }}recursos_comunes/css/foundation.css"/>
+	<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}vistasdemo/css/base.css">
+	<script src="{{ STATIC_URL }}recursos_comunes/js/vendor/jquery.js"></script>
+    <script src="{{ STATIC_URL }}recursos_comunes/js/vendor/modernizr.js"></script>
+   
+    <script src="{{ STATIC_URL }}recursos_comunes/js/vendor/jquery.js"></script>
+     <script src="{{ STATIC_URL }}recursos_comunes/js/foundation.min.js"></script>
+    <script type="text/javascript">
+
+    		function verAlerta(){
+    			console.log("test");
+    			$(".pivote").css({
+    							"display":"block", 
+    							"position": "absolute",
+    							"z-index": "4",
+    							"background-color": "white",
+    							"border": "1px solid #d4d0c7",
+    							"padding": "15px",
+    							"margin-left": "-111px",
+    							"margin-top": "5px",
+
+    							});
+    		}
+
+
+    		function verChat(){
+    			$(".chat").css({
+    				"display":"block", 
+    			});
+    		}
+
+
+
+    		function cerrarChat(){
+    			$(".chat").css({
+    				"display":"none", 
+    			});
+    		}
+
+
+
+
+
+    		function cerrarAlerta(){
+    			console.log("test");
+    			$(".pivote").css({
+    							"display":"none", 
+
+    							});
+    		}
+
+
+	        $(document).ready(function () {
+            console.log("ready!");
+
+            $("#notificacion").click(function(){
+            	verAlerta();
+            });
+
+            $(".cerrar").click(function(){
+            	cerrarAlerta();
+            });
+
+
+            $(".contacto").click(function(){
+            	verChat();
+            });
+
+            $(".cerrar-chat").click(function(){
+            	cerrarChat();
+            });
+
+
+            $(document).foundation();
+
+            $(".ayuda").click(function () {
+                $('#myModal').foundation('reveal', 'open');
+
+            });
+
+        });
+
+
+
+
+                </script>
+</head>
+<body >
+<div id="myModal" class="reveal-modal" data-reveal>
+    <h2>LISTA DE NOTIFICACIONES</h2>
+
+    <p class="lead">LISTA DE NOTIFICACIONES</p>
+
+    <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto
+        de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a
+        la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos
+        especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos
+        electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas
+        "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como
+        por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
+    <a class="close-reveal-modal">&#215;</a>
+</div>
+
+
+	<div class="row header">
+		<div class="small-12 large-2 columns">
+			<img src="{{ STATIC_URL }}recursos_comunes/img/logo.png">
+		</div>
+		
+		<div class="small-12 large-2 columns columns large-offset-5">
+			
+		</div>
+		<div class="small-12 large-3 columns ">
+			Bienvenido Sr Roberto <img src="{{ STATIC_URL }}recursos_comunes/img/small.jpg">
+			<div class="pivote">	
+				<ul>
+
+					
+					<li class="valido text-center">
+						El documento 001 ha sido aprobado
+
+					</li>
+					<li class="vencido text-center">
+						El permiso 043 se ha vencido
+					</li>
+					<li class="en-espera text-center">
+						El permiso 098 esta por vencerse
+					</li>
+					<li class="selectable text-center cerrar">
+						cerrar	
+					</li>
+
+				</ul>
+			
+			</div>
+		</div>
+		
+	</div>
+
+	
+
+	<div class="row">
+			<div class="small-12 large-12 columns">
+				<ul class="breadcrumbs">
+				  <li><a href="/perfiles/">Inicio</a></li>
+				  
+				
+				  
+				</ul>
+			</div>
+	</div>
+
+	<div class="row menu-perfiles">
+		<div class="small-12 large-3 columns herramientas">	
+			<ul>
+				<li class="titulo-herramientas">Que desea hacer ?</li>
+				<li><a href="/contratista">Mis ordenes de trabajo</a></li>
+				<li><a href="/cuadrilla">Mis Cuadrillas</a></li>
+				<li><a href="/areas">Mis Areas de trabajo</a></li>
+				<li><a href="/documentosrequeridos/">Estado de mis documentos</a></li>
+				<li><a href="/permisostrabajo/">Permisos de trabajo</a></li>			
+				<li>
+				<a href="#"  id="notificacion">Notificaciones</a>
+				</li>
+			</ul>
+			<ul>
+				<li class="titulo-herramientas">Desea mandar un mensaje?</li>
+				<li class="buscar-usuario"><input type="text" placeholder="Buscar contacto"></li>
+				<li class="contacto">Juan Covilla</li>
+				<li class="contacto">Yamid Leal</li>
+				<li class="contacto">Cesar Cardenas</li>
+				<div class="chat">
+				<ul>
+					<li>
+						<input type="text" class="titulo" placeholder="Ingrese el titulo">
+					</li>
+					<li>
+						<textarea class="text-left">
+						</textarea>
+					</li>
+					<li class="text-right chat-end">
+						<a href="#" class="button text-center">Enviar</a>
+						<a href="#" class="button text-center cerrar-chat">Cerrar</a>
+					</li>
+				</ul>
+				</div>
+				
+			</ul>
+		</div>
+
+		<div class="small-12 large-9 columns">
+			<div class="small-12 large-12 columns">
+				<div class="header-ordenes">
+					Estas son tus ordenes 
+				<div class="small-12 large-3 columns right" ><input type="text" placeholder="Buscar orden de trabajo"></div>
+				</div>
+			</div>
+			<div class="small-12 large-12 columns">		
+			<table >
+				<tr>
+				  <td>Numero</td>
+				  <td>Emisor</td> 
+				  <td>Tipo de orden</td>
+				  <td>Fecha Emision</td>
+				  <td>Fecha inicio del trabajo</td>
+				  <td>Fecha finalizacion</td>
+				  <td>Area</td>
+				  
+				</tr>
+				<tr>
+				  <td>Numero</td>
+				  <td>Emisor</td> 
+				  <td>Tipo de orden</td>
+				  <td>Fecha Emision</td>
+				  <td>Fecha inicio del trabajo</td>
+				  <td>Fecha finalizacion</td>
+				  <td>Lugar</td>
+				  <td><a href="/actividades/" ><p class="detalle text-center">  Ver Detalle</p></a></td>
+				</tr>
+				<tr>
+				  <td>Numero</td>
+				  <td>Emisor</td> 
+				  <td>Tipo de orden</td>
+				  <td>Fecha Emision</td>
+				  <td>Fecha inicio del trabajo</td>
+				  <td>Fecha finalizacion</td>
+				  <td>Lugar</td>
+				  <td><a href="/actividades/" ><p class="detalle text-center">  Ver Detalle</p></a></td>
+				</tr>
+				<tr>
+				  <td>Numero</td>
+				  <td>Emisor</td> 
+				  <td>Tipo de orden</td>
+				  <td>Fecha Emision</td>
+				  <td>Fecha inicio del trabajo</td>
+				  <td>Fecha finalizacion</td>
+				  <td>Lugar</td>
+				  <td><a href="/actividades/" ><p class="detalle text-center">  Ver Detalle</p></a></td>
+				</tr>
+				<tr>
+				  <td>Numero</td>
+				  <td>Emisor</td> 
+				  <td>Tipo de orden</td>
+				  <td>Fecha Emision</td>
+				  <td>Fecha inicio del trabajo</td>
+				  <td>Fecha finalizacion</td>
+				  <td>Lugar</td>
+				  <td><a href="/actividades/" ><p class="detalle text-center">  Ver Detalle</p></a></td>
+				</tr>
+				<tr>
+				  <td>Numero</td>
+				  <td>Emisor</td> 
+				  <td>Tipo de orden</td>
+				  <td>Fecha Emision</td>
+				  <td>Fecha inicio del trabajo</td>
+				  <td>Fecha finalizacion</td>
+				  <td>Lugar</td>
+				  <td><a href="/actividades/" ><p class="detalle text-center">  Ver Detalle</p></a></td>
+				</tr>
+				<tr>
+				  <td>Numero</td>
+				  <td>Emisor</td> 
+				  <td>Tipo de orden</td>
+				  <td>Fecha Emision</td>
+				  <td>Fecha inicio del trabajo</td>
+				  <td>Fecha finalizacion</td>
+				  <td>Lugar</td>
+				  <td><a href="/actividades/" ><p class="detalle text-center">  Ver Detalle</p></a></td>
+				</tr>
+				<tr>
+				  <td>Numero</td>
+				  <td>Emisor</td> 
+				  <td>Tipo de orden</td>
+				  <td>Fecha Emision</td>
+				  <td>Fecha inicio del trabajo</td>
+				  <td>Fecha finalizacion</td>
+				  <td>Lugar</td>
+				  <td><a href="/actividades/" ><p class="detalle text-center">  Ver Detalle</p></a></td>
+				</tr>
+
+				
+			</table>
+			</div>
+			<div class="small-12 large-12 columns">
+				<ul class="pagination">
+				  <li class="arrow unavailable"><a href="">&laquo;</a></li>
+				  <li class="current"><a href="">1</a></li>
+				  <li><a href="">2</a></li>
+				  <li><a href="">3</a></li>
+				  <li><a href="">4</a></li>
+				  <li class="unavailable"><a href="">&hellip;</a></li>
+				  <li><a href="">12</a></li>
+				  <li><a href="">13</a></li>
+				  <li class="arrow"><a href="">&raquo;</a></li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+

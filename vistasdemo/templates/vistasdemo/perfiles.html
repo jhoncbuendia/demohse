@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="{{ STATIC_URL }}recursos_comunes/css/foundation.css"/>
+	<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}vistasdemo/css/base.css">
+	<script src="{{ STATIC_URL }}recursos_comunes/js/vendor/jquery.js"></script>
+    <script src="{{ STATIC_URL }}recursos_comunes/js/vendor/modernizr.js"></script>
+    <script src="{{ STATIC_URL }}recursos_comunes/js/foundation.min.js"></script>
+    <script src="{{ STATIC_URL }}recursos_comunes/js/vendor/jquery.js"></script>
+    <script type="text/javascript">
+
+        function init() {
+            $(document).foundation();
+                    }
+    </script>
+</head>
+<body onload="init()">
+
+	<div class="row header">
+		<div class="small-12 large-2 columns">
+			<img src="{{ STATIC_URL }}recursos_comunes/img/logo.png">
+		</div>
+		
+		<div class="small-12 large-2 columns columns large-offset-5">
+			
+		</div>
+		<div class="small-12 large-3 columns ">
+			Bienvenido Sr Roberto <img src="{{ STATIC_URL }}recursos_comunes/img/small.jpg">
+		</div>
+	</div>
+
+	<div class="row menu-perfiles">
+		<div class="small-12 large-12 columns text-center titulo-perfiles">
+			Perfiles de usuario
+		</div>
+		<div class="small-12 large-4 columns">
+			<p class="item text-center"><a href="/contratista/">Contratista</a></p>
+		</div>
+		<div class="small-12 large-4 columns">
+			<p class="item text-center"><a href="/areas/">Jefe de Area</a></p>
+		</div>
+		<div class="small-12 large-4 columns">
+			<p class="item text-center"><a href="/contratante/">Contratante</a></p>
+		</div>
+		<div class="small-12 large-6 columns">
+			<p class="item text-center"><a href="/contratista/">Interventor</a></p>
+		</div>
+		<div class="small-12 large-6 columns">
+			<p class="item text-center"><a href="/contratista/">Inspector HSE</a></p>
+		</div>
+		
+	</div>
+</body>
+</html>
+

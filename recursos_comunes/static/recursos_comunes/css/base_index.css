@@ -1,0 +1,272 @@
+body {
+    background-color: #f1f2f7;
+}
+
+ul {
+    list-style: none;
+}
+
+#barra_superior {
+
+    background-color: white;
+    max-height: 55px;
+}
+
+#contenido {
+    /*background-color: green;*/
+
+}
+
+#cont-opciones {
+    margin-top: 10px;
+    background-color: rgb(51, 51, 51);
+
+}
+
+#cont-opciones ul li {
+    color: white;
+    margin-left: -17px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
+
+}
+
+#cont-opciones ul li:hover {
+    color: white;
+    background-color: black;
+   
+
+}
+
+#cont-opciones :first-child ul li:hover {
+    color: #f77662;
+}
+
+#columnaderecha {
+    background-color: #2a3542;
+
+}
+
+#columnaderecha ul li {
+    color: #a5aaaf;
+    margin-left: -20px;
+    padding-left: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
+
+}
+
+#columnaderecha ul li:hover {
+    color: white;
+    background-color: #35404d;
+   
+
+}
+
+#columnaderecha :first-child ul li:hover {
+    color: #f77662;
+}
+
+
+.menu-superior{
+	background-color: rgb(42, 53, 66);
+	height: 46px;
+
+}
+
+
+.menu-superior ul li:hover {
+     color: #f77662;
+    background-color: #35404d;
+   
+
+}
+
+.menu-superior ul li{
+ 	color: #a5aaaf;
+ 	padding: 10px;
+	}
+
+.menu {
+
+    margin-top: 10px;
+    font-weight: bold;
+    color: black;
+
+}
+
+.menu img {
+    margin-top: -5px;
+}
+
+.menu:hover {
+    cursor: pointer;
+}
+
+.salir {
+
+    margin-top: 10px;
+    background-color: red;
+    padding: 15px;
+    font-weight: bold;
+    color: white;
+
+}
+
+.app {
+    margin-top: 10px;
+    background-color: #55B968;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+    height: 180px;
+    margin-top: 30px;
+}
+
+.notificacion {
+    margin-top: 10px;
+    background-color: #F5B753;
+    padding: 15px;
+    font-weight: bold;
+    color: white;
+
+}
+
+label.valid {
+    width: 24px;
+    height: 24px;
+    top: -7px;
+    background: url(/media/valid.png) center center no-repeat;
+    position: relative;
+    display: inline-block;
+    text-indent: -9999px;
+}
+
+label.error {
+    font-weight: bold;
+    color: red;
+    padding: 2px 8px;
+    margin-top: 2px;
+}
+
+input.valid {
+    border-color: limegreen;
+}
+
+input.error {
+    border-color: red;
+}
+
+textarea {
+    resize: none;
+}
+
+.nav-popup > ul {
+
+}
+
+.nav-popup > ul > li {
+    /* will style only the top level li */
+    list-style: none;
+    border: 1px solid #f0f0f8;
+    display: inline-block;
+    line-height: 1;
+    margin: 1px;
+    border-radius: 3px;
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.nav-popup > ul > li > a {
+    color: #555a6a;
+    text-decoration: none !important;
+    font-size: 16px;
+    padding: 25px;
+}
+
+.nav-popup li ul {
+    position: absolute;
+    list-style: none;
+    text-align: center;
+    width: 180px;
+    left: 50%;
+    margin-left: -90px;
+    top: 15px;
+    font: bold 12px 'Open Sans Condensed', sans-serif;
+
+    /* This is important for the show/hide CSS animation */
+    max-height: 0px;
+    overflow: hidden;
+
+    -webkit-transition: max-height 0.4s linear;
+    -moz-transition: max-height 0.4s linear;
+    transition: max-height 0.4s linear;
+}
+
+.nav-popup li:hover ul {
+    max-height: 200px;
+}
+
+.nav-popup li ul li {
+    background-color: #313131;
+}
+
+.nav-popup li ul li a {
+    padding: 12px;
+    color: #fff !important;
+    text-decoration: none !important;
+    display: block;
+}
+
+.nav-popup li ul li:nth-child(odd) {
+    /* zebra stripes */
+    background-color: #363636;
+}
+
+.nav-popup li ul li:hover {
+    background-color: #444;
+}
+
+.nav-popup li ul li:first-child {
+    border-radius: 3px 3px 0 0;
+    margin-top: 25px;
+    position: relative;
+}
+
+.nav-popup li ul li:first-child:before {
+    /* the pointer tip */
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border: 5px solid transparent;
+    border-bottom-color: #313131;
+    left: 50%;
+    top: -10px;
+    margin-left: -5px;
+}
+
+.nav-popup li ul li:last-child {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.nav-popup li.green {
+    /* This is the color of the menu item */
+
+    /* This is the color of the icon */
+
+}
+
+.nav-popup li.red {
+    background-color: #ea5080;
+    color: #aa2a52;
+}
+
+#salir {
+    background-color: #b0dc78;
+}
